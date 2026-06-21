@@ -1,12 +1,16 @@
 package com.example.demo3;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.RequiredArgsConstructor;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Entity
 @Table(name = "PERSONS")
-@IdClass(PersonId.class) // Указываем составной ключ
+@IdClass(PersonId.class)
 public class Person {
 
     @Id
